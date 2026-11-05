@@ -1,0 +1,367 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`v1 reference compositions > abstract 1`] = `
+[
+  {
+    "background": "#C65A35",
+    "elements": [
+      {
+        "cx": 28,
+        "cy": 30,
+        "fill": "#FBE8CD",
+        "kind": "circle",
+        "r": 26,
+      },
+      {
+        "cx": 52,
+        "cy": 50,
+        "fill": "#27383F",
+        "kind": "circle",
+        "r": 26,
+      },
+      {
+        "d": "M26.69 55.97A26 26 0 0 0 53.31 24.03A26 26 0 0 0 26.69 55.97Z",
+        "fill": "#C65A35",
+        "kind": "path",
+      },
+    ],
+    "paletteId": "terracotta",
+    "rotate": 270,
+    "style": "abstract",
+    "templateId": "venn",
+    "version": 1,
+  },
+  {
+    "background": "#F6C9C4",
+    "elements": [
+      {
+        "cx": 0,
+        "cy": 80,
+        "fill": "#7A1E3A",
+        "kind": "circle",
+        "r": 58,
+      },
+      {
+        "cx": 41.012206,
+        "cy": 38.987794,
+        "fill": "#E0452A",
+        "kind": "circle",
+        "r": 12,
+      },
+    ],
+    "paletteId": "blush",
+    "rotate": 180,
+    "style": "abstract",
+    "templateId": "horizon",
+    "version": 1,
+  },
+  {
+    "background": "#5F6F2E",
+    "elements": [
+      {
+        "cx": 40,
+        "cy": 40,
+        "fill": "#E7B53C",
+        "kind": "circle",
+        "r": 24,
+      },
+      {
+        "fill": "#F5EFD6",
+        "height": 40,
+        "kind": "rect",
+        "rx": 0,
+        "width": 40,
+        "x": 0,
+        "y": 40,
+      },
+    ],
+    "paletteId": "moss",
+    "rotate": 270,
+    "style": "abstract",
+    "templateId": "corner-overlap",
+    "version": 1,
+  },
+  {
+    "background": "#E4472B",
+    "elements": [
+      {
+        "d": "M0 32A20 20 0 0 1 40 32A20 20 0 0 0 80 32L80 80L0 80Z",
+        "fill": "#FCEBD3",
+        "kind": "path",
+      },
+      {
+        "d": "M0 62A20 20 0 0 1 40 62A20 20 0 0 0 80 62L80 80L0 80Z",
+        "fill": "#1E1B3A",
+        "kind": "path",
+      },
+    ],
+    "paletteId": "tomato",
+    "rotate": 180,
+    "style": "abstract",
+    "templateId": "waves",
+    "version": 1,
+  },
+  {
+    "background": "#5F6F2E",
+    "elements": [
+      {
+        "d": "M0 80L80 80L80 0Z",
+        "fill": "#F5EFD6",
+        "kind": "path",
+      },
+      {
+        "cx": 26,
+        "cy": 26,
+        "fill": "#E7B53C",
+        "kind": "circle",
+        "r": 14,
+      },
+    ],
+    "paletteId": "moss",
+    "rotate": 180,
+    "style": "abstract",
+    "templateId": "diagonal",
+    "version": 1,
+  },
+]
+`;
+
+exports[`v1 reference compositions > color 1`] = `
+[
+  {
+    "background": "#C65A35",
+    "elements": [
+      {
+        "d": "M40 14A9.95 9.95 0 0 1 58.38 21.62A9.95 9.95 0 0 1 66 40A9.95 9.95 0 0 1 58.38 58.38A9.95 9.95 0 0 1 40 66A9.95 9.95 0 0 1 21.62 58.38A9.95 9.95 0 0 1 14 40A9.95 9.95 0 0 1 21.62 21.62A9.95 9.95 0 0 1 40 14Z",
+        "fill": "#FBE8CD",
+        "kind": "path",
+      },
+    ],
+    "paletteId": "terracotta",
+    "style": "color",
+    "templateId": "silhouette",
+    "version": 1,
+  },
+  {
+    "background": "#F6C9C4",
+    "elements": [
+      {
+        "d": "M60 -6L71.48 32.28L106.67 13.33L87.72 48.52L126 60L87.72 71.48L106.67 106.67L71.48 87.72L60 126L48.52 87.72L13.33 106.67L32.28 71.48L-6 60L32.28 48.52L13.33 13.33L48.52 32.28Z",
+        "fill": "#7A1E3A",
+        "kind": "path",
+      },
+    ],
+    "paletteId": "blush",
+    "rotate": 90,
+    "style": "color",
+    "templateId": "oversized",
+    "version": 1,
+  },
+  {
+    "background": "#5F6F2E",
+    "elements": [
+      {
+        "d": "M40 44A9.32 9.32 0 0 1 58 48.82A9.32 9.32 0 0 1 71.18 62A9.32 9.32 0 0 1 76 80A9.32 9.32 0 0 1 71.18 98A9.32 9.32 0 0 1 58 111.18A9.32 9.32 0 0 1 40 116A9.32 9.32 0 0 1 22 111.18A9.32 9.32 0 0 1 8.82 98A9.32 9.32 0 0 1 4 80A9.32 9.32 0 0 1 8.82 62A9.32 9.32 0 0 1 22 48.82A9.32 9.32 0 0 1 40 44Z",
+        "fill": "#F5EFD6",
+        "kind": "path",
+      },
+    ],
+    "paletteId": "moss",
+    "rotate": 90,
+    "style": "color",
+    "templateId": "oversized",
+    "version": 1,
+  },
+  {
+    "background": "#E4472B",
+    "elements": [
+      {
+        "fill": "#FCEBD3",
+        "height": 14,
+        "kind": "rect",
+        "rotate": {
+          "angle": 135,
+          "cx": 20,
+          "cy": 20,
+        },
+        "rx": 7,
+        "width": 60,
+        "x": -10,
+        "y": 13,
+      },
+      {
+        "fill": "#FCEBD3",
+        "height": 14,
+        "kind": "rect",
+        "rotate": {
+          "angle": 135,
+          "cx": 40,
+          "cy": 40,
+        },
+        "rx": 7,
+        "width": 72,
+        "x": 4,
+        "y": 33,
+      },
+      {
+        "fill": "#FCEBD3",
+        "height": 14,
+        "kind": "rect",
+        "rotate": {
+          "angle": 135,
+          "cx": 60,
+          "cy": 60,
+        },
+        "rx": 7,
+        "width": 60,
+        "x": 30,
+        "y": 53,
+      },
+    ],
+    "paletteId": "tomato",
+    "style": "color",
+    "templateId": "repeated",
+    "version": 1,
+  },
+  {
+    "background": "#5F6F2E",
+    "elements": [
+      {
+        "d": "M40 5Q40 40 75 40Q40 40 40 75Q40 40 5 40Q40 40 40 5Z",
+        "fill": "#F5EFD6",
+        "kind": "path",
+      },
+    ],
+    "paletteId": "moss",
+    "style": "color",
+    "templateId": "silhouette",
+    "version": 1,
+  },
+]
+`;
+
+exports[`v1 reference compositions > geometric 1`] = `
+[
+  {
+    "background": "#C65A35",
+    "elements": [
+      {
+        "d": "M40 9L67 63L13 63Z",
+        "fill": "#FBE8CD",
+        "kind": "path",
+      },
+    ],
+    "paletteId": "terracotta",
+    "style": "geometric",
+    "templateId": "centered",
+    "version": 1,
+  },
+  {
+    "background": "#F6C9C4",
+    "elements": [
+      {
+        "fill": "#7A1E3A",
+        "height": 44,
+        "kind": "rect",
+        "rotate": {
+          "angle": 45,
+          "cx": 40,
+          "cy": 40,
+        },
+        "rx": 0,
+        "width": 22,
+        "x": 18,
+        "y": 18,
+      },
+      {
+        "fill": "#E0452A",
+        "height": 44,
+        "kind": "rect",
+        "rotate": {
+          "angle": 45,
+          "cx": 40,
+          "cy": 40,
+        },
+        "rx": 0,
+        "width": 22,
+        "x": 40,
+        "y": 18,
+      },
+    ],
+    "paletteId": "blush",
+    "style": "geometric",
+    "templateId": "split",
+    "version": 1,
+  },
+  {
+    "background": "#5F6F2E",
+    "elements": [
+      {
+        "fill": "#F5EFD6",
+        "height": 44,
+        "kind": "rect",
+        "rotate": {
+          "angle": 135,
+          "cx": 40,
+          "cy": 40,
+        },
+        "rx": 0,
+        "width": 22,
+        "x": 18,
+        "y": 18,
+      },
+      {
+        "fill": "#E7B53C",
+        "height": 44,
+        "kind": "rect",
+        "rotate": {
+          "angle": 135,
+          "cx": 40,
+          "cy": 40,
+        },
+        "rx": 0,
+        "width": 22,
+        "x": 40,
+        "y": 18,
+      },
+    ],
+    "paletteId": "moss",
+    "style": "geometric",
+    "templateId": "split",
+    "version": 1,
+  },
+  {
+    "background": "#E4472B",
+    "elements": [
+      {
+        "d": "M21 62L21 37A19 19 0 0 1 59 37L59 62Z",
+        "fill": "#FCEBD3",
+        "kind": "path",
+        "rotate": {
+          "angle": 135,
+          "cx": 40,
+          "cy": 40,
+        },
+      },
+    ],
+    "paletteId": "tomato",
+    "style": "geometric",
+    "templateId": "rotated",
+    "version": 1,
+  },
+  {
+    "background": "#5F6F2E",
+    "elements": [
+      {
+        "d": "M40 12L64.25 26L64.25 54L40 68L15.75 54L15.75 26Z",
+        "fill": "#F5EFD6",
+        "kind": "path",
+      },
+    ],
+    "paletteId": "moss",
+    "style": "geometric",
+    "templateId": "centered",
+    "version": 1,
+  },
+]
+`;
