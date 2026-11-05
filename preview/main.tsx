@@ -124,7 +124,7 @@ function App() {
     <main>
       <header>
         <div className="row between">
-          <h1>Workspace icons</h1>
+          <h1>Funcons</h1>
           <button type="button" className="outline" onClick={() => setDark(!dark)}>
             {dark ? "Light" : "Dark"}
           </button>

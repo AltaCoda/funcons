@@ -1,14 +1,30 @@
-# Workspace icons
+# Funcons
 
 Procedurally generated workspace icons: small abstract artworks in three visual
 families, drawn from a config you store instead of an image. Generation is
 synchronous and local, with no network, canvas or image assets. The core has no
 dependencies, and React is an optional peer for the component.
 
+<img src="docs/mixed.svg" alt="Thirty generated icons from all three families" width="100%">
+
+## The three families
+
+**Geometric:** one bold motif with plenty of space.
+
+<img src="docs/geometric.svg" alt="Twenty icons from the geometric family" width="100%">
+
+**Abstract:** large overlapping shapes that run off the tile.
+
+<img src="docs/abstract.svg" alt="Twenty icons from the abstract family" width="100%">
+
+**Color:** one silhouette in strictly two colours, so the palette does the identifying.
+
+<img src="docs/color.svg" alt="Twenty icons from the color family" width="100%">
+
 ## Use
 
 ```tsx
-import { WorkspaceIcon } from "@bench47/workspace-icons/react"
+import { WorkspaceIcon } from "funcons/react"
 
 const icon = { version: 1, style: "geometric", seed: workspace.id }
 
@@ -19,7 +35,7 @@ const icon = { version: 1, style: "geometric", seed: workspace.id }
 Without React:
 
 ```ts
-import { generateIcon, renderSvgString } from "@bench47/workspace-icons"
+import { generateIcon, renderSvgString } from "funcons"
 
 const svg = renderSvgString(generateIcon(icon), { size: 80 })
 ```
@@ -59,6 +75,7 @@ pnpm preview     # contact sheet at http://localhost:5199
 pnpm test
 pnpm typecheck
 pnpm build       # dist/
+pnpm readme:images  # redraw the images above into docs/
 ```
 
 Review changes on the contact sheet at 80, 32 and 24px. Fix problems in the
