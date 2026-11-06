@@ -1,2 +1,2 @@
 export { renderIcon } from "./render/SvgRenderer.js"
-export { WorkspaceIcon, type WorkspaceIconProps } from "./render/WorkspaceIcon.js"
+export { Funcon, type FunconProps } from "./render/Funcon.js"

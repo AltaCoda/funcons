@@ -9,5 +9,5 @@ export {
   type IconPalette,
   type IconRotation,
   type IconStyle,
-  type WorkspaceIconConfig,
+  type FunconConfig,
 } from "./types.js"

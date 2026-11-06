@@ -30,7 +30,7 @@ const config = (style, seed) => ({ version: 1, style, seed })
 
 mkdirSync("docs", { recursive: true })
 for (const style of ICON_STYLES) {
-  const configs = seeds("workspace", COLUMNS * ROWS).map((seed) => config(style, seed))
+  const configs = seeds("funcon", COLUMNS * ROWS).map((seed) => config(style, seed))
   writeFileSync(`docs/${style}.svg`, sheet(configs, ROWS))
 }
 const mixed = seeds("funcons", COLUMNS * 3).map((seed, i) => config(ICON_STYLES[i % ICON_STYLES.length], seed))

@@ -8,14 +8,14 @@ import { describe, expect, it } from "vitest"
 import { generateIcon } from "../generate.js"
 import { renderIcon } from "../render/SvgRenderer.js"
 import { renderSvgString } from "../render/svgString.js"
-import { WorkspaceIcon } from "../render/WorkspaceIcon.js"
+import { Funcon } from "../render/Funcon.js"
 import { ICON_STYLES } from "../types.js"
 
 const config = { version: 1, style: "abstract", seed: "render-test" } as const
 
-describe("WorkspaceIcon", () => {
+describe("Funcon", () => {
   it.each([24, 32, 80])("renders a square svg at %ipx", (size) => {
-    const { container } = render(<WorkspaceIcon config={config} size={size} />)
+    const { container } = render(<Funcon config={config} size={size} />)
     const svg = container.querySelector("svg")!
     expect(svg.getAttribute("width")).toBe(String(size))
     expect(svg.getAttribute("height")).toBe(String(size))
@@ -23,19 +23,19 @@ describe("WorkspaceIcon", () => {
   })
 
   it("is hidden from assistive technology by default", () => {
-    const { container } = render(<WorkspaceIcon config={config} />)
+    const { container } = render(<Funcon config={config} />)
     expect(container.querySelector("svg")!.getAttribute("aria-hidden")).toBe("true")
   })
 
   it("carries a label when it stands alone", () => {
-    const { getByRole } = render(<WorkspaceIcon config={config} label="Adze" />)
-    expect(getByRole("img", { name: "Adze" })).toBeTruthy()
+    const { getByRole } = render(<Funcon config={config} label="Acme" />)
+    expect(getByRole("img", { name: "Acme" })).toBeTruthy()
   })
 
   it("does not change on re-render", () => {
-    const { container, rerender } = render(<WorkspaceIcon config={config} />)
+    const { container, rerender } = render(<Funcon config={config} />)
     const before = container.innerHTML
-    rerender(<WorkspaceIcon config={{ ...config }} />)
+    rerender(<Funcon config={{ ...config }} />)
     expect(container.innerHTML).toBe(before)
   })
 
@@ -43,7 +43,7 @@ describe("WorkspaceIcon", () => {
     const errors: unknown[] = []
     for (const style of ICON_STYLES) {
       for (let i = 0; i < 50; i++) {
-        const element = <WorkspaceIcon config={{ version: 1, style, seed: `ssr-${i}` }} />
+        const element = <Funcon config={{ version: 1, style, seed: `ssr-${i}` }} />
         const host = document.createElement("div")
         host.innerHTML = renderToString(element)
         let root!: Root
@@ -57,7 +57,7 @@ describe("WorkspaceIcon", () => {
   })
 
   it("draws a placeholder rather than crashing on a config from a newer generator", () => {
-    const { container } = render(<WorkspaceIcon config={{ version: 999, style: "color", seed: "x" }} size={24} />)
+    const { container } = render(<Funcon config={{ version: 999, style: "color", seed: "x" }} size={24} />)
     const svg = container.querySelector("svg")!
     expect(svg.getAttribute("width")).toBe("24")
     expect(svg.querySelector("g")!.childElementCount).toBe(0)
@@ -65,7 +65,7 @@ describe("WorkspaceIcon", () => {
 
   it("works for any seed string", () => {
     for (const seed of ["", " ", "🎨", "\ud800", "x".repeat(10000)]) {
-      expect(() => render(<WorkspaceIcon config={{ version: 1, style: "color", seed }} />)).not.toThrow()
+      expect(() => render(<Funcon config={{ version: 1, style: "color", seed }} />)).not.toThrow()
     }
   })
 })
