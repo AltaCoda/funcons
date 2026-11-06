@@ -82,3 +82,7 @@ Review changes on the contact sheet at 80, 32 and 24px. Fix problems in the
 templates, never by special-casing seeds. Each family's header comment lists the
 shapes kept out because they read as something else (a play button, a stop sign,
 the letters U and C); keep new templates clear of those too.
+
+## License
+
+Copyright 2026 AltaCoda. Licensed under the [Apache License, Version 2.0](LICENSE).
