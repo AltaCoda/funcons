@@ -1,16 +1,16 @@
 import { StrictMode, useEffect, useMemo, useState } from "react"
 import { createRoot } from "react-dom/client"
 
-import { generateIcon, ICON_STYLES, LATEST_ICON_VERSION, PALETTES, type IconStyle, type WorkspaceIconConfig } from "../src/index.js"
-import { WorkspaceIcon } from "../src/react.js"
+import { generateIcon, ICON_STYLES, LATEST_ICON_VERSION, PALETTES, type IconStyle, type FunconConfig } from "../src/index.js"
+import { Funcon } from "../src/react.js"
 
 const SIZES = [80, 32, 24]
 const COUNTS = [100, 200, 400]
 const VIEWS = ["all", ...ICON_STYLES, "mixed"]
 const FAMILY_LABEL: Record<IconStyle, string> = { geometric: "A · Geometric", abstract: "B · Abstract", color: "C · Color" }
-const SAMPLE_WORKSPACES = ["adze", "oifi", "sendops", "bench47", "altacoda-cluster", "help-center"]
+const SAMPLE_NAMES = ["acme", "design", "platform", "marketing", "data-science", "help-center"]
 
-const config = (style: IconStyle, seed: string): WorkspaceIconConfig => ({ version: LATEST_ICON_VERSION, style, seed })
+const config = (style: IconStyle, seed: string): FunconConfig => ({ version: LATEST_ICON_VERSION, style, seed })
 
 function readParams() {
   const params = new URLSearchParams(location.search)
@@ -19,7 +19,7 @@ function readParams() {
     view: VIEWS.includes(view) ? view : "all",
     size: Number(params.get("size")) || SIZES[0],
     count: Number(params.get("count")) || COUNTS[0],
-    seed: params.get("seed") ?? "workspace",
+    seed: params.get("seed") ?? "funcon",
   }
 }
 
@@ -36,7 +36,7 @@ function Segmented<T extends string | number>({ options, value, onChange, unit =
   )
 }
 
-function Sheet({ title, configs, size, selected, onSelect }: { title: string; configs: WorkspaceIconConfig[]; size: number; selected: WorkspaceIconConfig | null; onSelect: (c: WorkspaceIconConfig) => void }) {
+function Sheet({ title, configs, size, selected, onSelect }: { title: string; configs: FunconConfig[]; size: number; selected: FunconConfig | null; onSelect: (c: FunconConfig) => void }) {
   return (
     <section>
       <h2>
@@ -52,7 +52,7 @@ function Sheet({ title, configs, size, selected, onSelect }: { title: string; co
             aria-pressed={selected?.seed === c.seed && selected.style === c.style}
             onClick={() => onSelect(c)}
           >
-            <WorkspaceIcon config={c} size={size} label={`${c.style} icon, seed ${c.seed}`} />
+            <Funcon config={c} size={size} label={`${c.style} icon, seed ${c.seed}`} />
           </button>
         ))}
       </div>
@@ -60,14 +60,14 @@ function Sheet({ title, configs, size, selected, onSelect }: { title: string; co
   )
 }
 
-function Detail({ selected }: { selected: WorkspaceIconConfig }) {
+function Detail({ selected }: { selected: FunconConfig }) {
   const composition = useMemo(() => generateIcon(selected), [selected])
   return (
     <section className="card">
       <div className="sizes">
         {[160, ...SIZES].map((size) => (
           <div key={size}>
-            <WorkspaceIcon config={selected} size={size} />
+            <Funcon config={selected} size={size} />
             <small>{size}px</small>
           </div>
         ))}
@@ -93,9 +93,9 @@ function InContext({ seed, dark }: { seed: string; dark: boolean }) {
   const colors = dark ? { background: "#171717", color: "#fafafa", borderColor: "#333333" } : { background: "#ffffff", color: "#171717", borderColor: "#e5e5e5" }
   return (
     <div className="list" style={colors}>
-      {SAMPLE_WORKSPACES.map((name, i) => (
+      {SAMPLE_NAMES.map((name, i) => (
         <div key={name}>
-          <WorkspaceIcon config={config(ICON_STYLES[i % ICON_STYLES.length], `${seed}-${name}`)} size={24} />
+          <Funcon config={config(ICON_STYLES[i % ICON_STYLES.length], `${seed}-${name}`)} size={24} />
           {name}
         </div>
       ))}
@@ -105,7 +105,7 @@ function InContext({ seed, dark }: { seed: string; dark: boolean }) {
 
 function App() {
   const [state, setState] = useState(readParams)
-  const [selected, setSelected] = useState<WorkspaceIconConfig | null>(null)
+  const [selected, setSelected] = useState<FunconConfig | null>(null)
   const [dark, setDark] = useState(false)
   const { view, size, count, seed } = state
 
@@ -147,7 +147,7 @@ function App() {
       {selected && <Detail selected={selected} />}
 
       <section>
-        <h2>In a workspace list, 24px</h2>
+        <h2>In a list, 24px</h2>
         <div className="row">
           <InContext seed={seed} dark={false} />
           <InContext seed={seed} dark />

@@ -1,8 +1,8 @@
 export const ICON_STYLES = ["geometric", "abstract", "color"] as const
 export type IconStyle = (typeof ICON_STYLES)[number]
 
-/** What gets persisted on a workspace. The rendered SVG never is. */
-export interface WorkspaceIconConfig {
+/** What gets persisted alongside the thing the icon represents. The rendered SVG never is. */
+export interface FunconConfig {
   version: number
   style: IconStyle
   seed: string

@@ -1,7 +1,7 @@
 {
   "name": "funcons",
   "version": "1.0.0",
-  "description": "Deterministic, procedurally generated workspace icons as SVG. No network, no assets, no runtime dependencies.",
+  "description": "Deterministic, procedurally generated icons as SVG. No network, no assets, no runtime dependencies.",
   "private": true,
   "license": "UNLICENSED",
   "type": "module",

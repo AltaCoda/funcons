@@ -1,6 +1,6 @@
 # Funcons
 
-Procedurally generated workspace icons: small abstract artworks in three visual
+Procedurally generated icons for anything with an ID: small abstract artworks in three visual
 families, drawn from a config you store instead of an image. Generation is
 synchronous and local, with no network, canvas or image assets. The core has no
 dependencies, and React is an optional peer for the component.
@@ -24,12 +24,12 @@ dependencies, and React is an optional peer for the component.
 ## Use
 
 ```tsx
-import { WorkspaceIcon } from "funcons/react"
+import { Funcon } from "funcons/react"
 
-const icon = { version: 1, style: "geometric", seed: workspace.id }
+const icon = { version: 1, style: "geometric", seed: team.id }
 
-<WorkspaceIcon config={icon} size={32} />               // next to a visible name
-<WorkspaceIcon config={icon} size={32} label="Adze" />  // standing alone
+<Funcon config={icon} size={32} />               // next to a visible name
+<Funcon config={icon} size={32} label="Acme" />  // standing alone
 ```
 
 Without React:
@@ -42,12 +42,12 @@ const svg = renderSvgString(generateIcon(icon), { size: 80 })
 
 Persist the `{ version, style, seed }` config, never the SVG. Styles are
 `geometric`, `abstract` and `color`. The seed is any string, and one seed keeps
-its palette across all three styles. `WorkspaceIcon` rounds its own corners; with
+its palette across all three styles. `Funcon` rounds its own corners; with
 `renderSvgString`, clipping is up to you.
 
 A config this build can't draw, such as one saved by a newer generator, makes
 `generateIcon` throw a `RangeError` (check with `isSupportedIconConfig`).
-`WorkspaceIcon` draws a plain grey tile instead, so a stale tab can't crash a page.
+`Funcon` draws a plain grey tile instead, so a stale tab can't crash a page.
 
 ## Stability
 
