@@ -83,6 +83,16 @@ templates, never by special-casing seeds. Each family's header comment lists the
 shapes kept out because they read as something else (a play button, a stop sign,
 the letters U and C); keep new templates clear of those too.
 
+## Sponsors
+
+Funcons is built and maintained with support from:
+
+<p>
+  <a href="https://bench47.com"><img src="docs/sponsors/bench47.svg" alt="Bench47" height="36"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://sendops.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/sponsors/sendops-dark.svg"><img src="docs/sponsors/sendops-light.svg" alt="SendOps" height="36"></picture></a>
+</p>
+
 ## License
 
 Copyright 2026 AltaCoda. Licensed under the [Apache License, Version 2.0](LICENSE).
